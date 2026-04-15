@@ -28,3 +28,11 @@ A responsive, accessible, and highly testable Profile Card built with semantic H
 
    ```bash
    git clone [your-repo-url]
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd profile-card-task
+    ```
+
+3. Open index.html in your favorite browser. No build steps or local servers are strictly required! (If you have VS Code, using the 'Live Server' extension works perfectly).
