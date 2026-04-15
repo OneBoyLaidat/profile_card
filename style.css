@@ -1,0 +1,166 @@
+/* CSS Reset & Variables */
+:root {
+  --bg-color: #f4f4f5;
+  --card-bg: #ffffff;
+  --text-primary: #18181b; /* High contrast for WCAG AA */
+  --text-secondary: #3f3f46;
+  --accent-color: #2563eb;
+  --accent-hover: #1d4ed8;
+  --focus-ring: #60a5fa;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Card Layout - Mobile First */
+.profile-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  max-width: 800px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Avatar Figure */
+.profile-avatar-container {
+  background: #e2e8f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--card-bg);
+  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+}
+
+/* Content Area */
+.profile-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profile-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.profile-bio {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+/* Dynamic Time Display */
+.time-container {
+  background: var(--bg-color);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  display: inline-block;
+}
+
+.time-label {
+  font-weight: 600;
+  color: var(--text-secondary);
+  display: inline;
+}
+
+.time-value {
+  font-family: monospace;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+/* Lists Layout */
+.lists-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.list-section h2 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.list-section ul {
+  list-style-position: inside;
+  color: var(--text-secondary);
+}
+
+/* Social Nav Links */
+.social-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.social-links a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.social-links a:hover {
+  background-color: var(--accent-color);
+  color: var(--card-bg);
+}
+
+/* Global Focus Styles for Accessibility */
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+/* Tablet & Desktop Layout breakpoint */
+@media (min-width: 768px) {
+  .profile-card {
+    flex-direction: row;
+  }
+  
+  .profile-avatar-container {
+    flex: 0 0 35%; /* Fixed width for avatar area */
+    padding: 3rem 2rem;
+  }
+
+  .lists-container {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}

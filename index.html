@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="page-wrapper">
+    <article data-testid="test-profile-card" class="profile-card">
+      
+      <figure class="profile-avatar-container">
+        <img 
+          src="https://api.dicebear.com/7.x/avataaars/svg?seed=FrontendWizard" 
+          alt="Illustration of a frontend developer" 
+          data-testid="test-user-avatar" 
+          class="profile-avatar"
+        >
+      </figure>
+
+      <div class="profile-content">
+        <header>
+          <h1 data-testid="test-user-name" class="profile-name">HeWhoCannotBeNamed Da Developer</h1>
+          <p data-testid="test-user-bio" class="profile-bio">
+            User-focused frontend developer who enjoys building accessible interfaces,
+              learning new UI patterns, and turning clean ideas into responsive experiences.
+          </p>
+        </header>
+
+        <div class="time-container" aria-live="polite" aria-atomic="true">
+          <p class="time-label">Current Epoch Time (ms):</p>
+          <span data-testid="test-user-time" class="time-value">Loading...</span>
+        </div>
+
+        <div class="lists-container">
+          <section class="list-section">
+            <h2 id="hobbies-heading">Hobbies</h2>
+            <ul data-testid="test-user-hobbies" aria-labelledby="hobbies-heading">
+              <li>Music</li>
+              <li>Watching and playing Football</li>
+              <li>Reading Non-fiction books</li>
+            </ul>
+          </section>
+
+          <section class="list-section">
+            <h2 id="dislikes-heading">Dislikes</h2>
+            <ul data-testid="test-user-dislikes" aria-labelledby="dislikes-heading">
+              <li>Real Madrid</li>
+              <li>Low-contrast text</li>
+              <li>Broken links</li>
+            </ul>
+          </section>
+        </div>
+
+        <nav aria-label="Social profiles" class="social-nav">
+          <ul data-testid="test-user-social-links" class="social-links">
+            <li>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-twitter">
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </article>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
