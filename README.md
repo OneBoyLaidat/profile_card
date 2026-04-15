@@ -4,7 +4,7 @@ A responsive, accessible, and highly testable Profile Card built with semantic H
 
 ## 🚀 Live Demo
 
-[Insert your Netlify / Vercel / GitHub Pages link here]
+[Check it out](https://hewhocannotbenamedprofilecard.netlify.app/)
 
 ## 🛠️ Tech Stack
 
@@ -27,7 +27,7 @@ A responsive, accessible, and highly testable Profile Card built with semantic H
 1. Clone this repository:
 
    ```bash
-   git clone [your-repo-url]
+   git clone https://github.com/OneBoyLaidat/profile_card
 
 2. Navigate to the project directory:
 
